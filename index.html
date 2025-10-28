@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Joshua Nhiel Apuran</title>
+  <meta name="description" content="A personal website about Joshua Nhiel Apuran from Lapu-Lapu City, Cebu." />
+  <style>
+    :root{
+      --bg1:#0f1724;
+      --bg2:#07101a;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-width:1100px;
+      --gap:18px;
+      --transition:200ms cubic-bezier(.2,.9,.3,1);
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;overflow-x:hidden;}
+    body{
+      margin:0;
+      background: radial-gradient(circle at center, var(--bg1), var(--bg2));
+      color:#e6eef6;
+      line-height:1.45;
+      padding:36px 20px;
+      display:flex;
+      justify-content:center;
+      position: relative;
+    }
+    canvas#particles{
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      z-index:-1;
+    }
+    .site{width:100%;max-width:var(--max-width);display:grid;gap:var(--gap);position:relative;z-index:1;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021018;box-shadow:0 6px 18px rgba(6,182,212,0.12)}
+    h1{font-size:1.15rem;margin:0}
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);padding:24px;display:grid;gap:16px;align-items:center;grid-template-columns:1fr 320px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .hero h2{margin:0 0 6px 0;font-size:1.6rem}
+    .lead{color:var(--muted);margin:0}
+    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .features, .hobbies, .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+    .feature, .hobby{
+      padding:14px;border-radius:12px;background:var(--glass);
+      border:1px solid rgba(255,255,255,0.02);
+      transition:transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      cursor:pointer;
+    }
+    .feature:hover, .hobby:hover{
+      transform:translateY(-8px) scale(1.03);
+      box-shadow:0 8px 30px rgba(6,182,212,0.25);
+      background:rgba(255,255,255,0.06);
+    }
+    .gallery img, .gallery video{width:100%;border-radius:10px;object-fit:cover;cursor:pointer;transition:transform 0.3s ease, box-shadow 0.3s ease;}
+    .gallery img:hover{transform:scale(1.05);box-shadow:0 6px 20px rgba(6,182,212,0.3);}
+    .video-wrapper{display:flex;justify-content:center;align-items:center;margin-top:12px}
+    .video-wrapper video{width:60%;max-width:600px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.4)}
+    footer{display:flex;justify-content:center;align-items:center;padding:12px 6px;color:var(--muted)}
+    .muted{color:var(--muted)}
+    #lightbox {
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.85);
+      justify-content:center;
+      align-items:center;
+      z-index:999;
+    }
+    #lightbox img{
+      max-width:90%;
+      max-height:90%;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo">JN</div>
+        <div>
+          <h1>Joshua Nhiel Apuran</h1>
+          <div class="muted tiny">Lapu-Lapu City, Cebu</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h2>Hi, I'm Joshua Nhiel Apuran 👋</h2>
+          <p class="lead">I'm from Lapu-Lapu City, Cebu — passionate about technology, creativity, and continuous learning.</p>
+          <div style="height:14px"></div>
+          <div class="card">
+            <h3>About Me</h3>
+            <p class="muted">
+              I’m a dedicated and curious individual who loves exploring how things work — from coding and design to problem-solving and innovation.
+              My passion for technology started at a young age, and since then, I’ve been constantly learning and experimenting with different tools.
+            </p>
+            <p class="muted">
+              I enjoy transforming ideas into reality — whether that’s building web projects, editing videos, or designing visuals that tell a story.
+              I believe creativity and logic go hand in hand, and I always try to bring both into everything I do.
+            </p>
+          </div>
+        </div>
+        <aside>
+          <div class="card" style="text-align:center">
+            <img src="bd9f1f17-7201-406d-94d7-06cbf3f88957.jpg" alt="Photo of Joshua Nhiel Apuran" style="width:220px;height:auto;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.4);margin-bottom:12px;">
+            <h3>Quick Facts</h3>
+            <ul class="muted">
+              <li>🏠 From Lapu-Lapu City, Cebu</li>
+              <li>🎓 Lifelong learner</li>
+              <li>💻 Interested in web development and design</li>
+              <li>🎮 Enjoys gaming, music, and creativity</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card">
+        <h3>My Hobbies</h3>
+        <div class="hobbies">
+          <div class="hobby"><h3>🏓 Playing Pickleball</h3><p>I love playing pickleball to stay active and enjoy friendly competition.</p></div>
+          <div class="hobby"><h3>✈️ Travelling</h3><p>Exploring new places gives me inspiration, perspective, and unforgettable memories.</p></div>
+          <div class="hobby"><h3>🎮 Mobile Games</h3><p>Gaming helps me relax, strategize, and connect with friends.</p></div>
+          <div class="hobby"><h3>🌟 And Many More</h3><p>I love discovering and trying out new things that spark creativity.</p></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>My Works & Projects</h3>
+        <div class="gallery">
+          <img src="548335115_1989480781875858_5312552947643073169_n.jpg" alt="Project 1">
+          <img src="548274155_1989305781893358_163549925888030539_n.jpg" alt="Project 2">
+          <img src="548325165_1989306171893319_8216171558723450054_n.jpg" alt="Project 3">
+          <img src="552710608_1994559878034615_9091115093900077892_n.jpg" alt="Project 4">
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Featured Video</h3>
+        <p class="muted">Here’s one of my recent works. Feel free to play and enjoy!</p>
+        <div class="video-wrapper">
+          <video controls>
+            <source src="0178a50c-76d1-4f2c-b940-89a818779000 (2).mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2025 Joshua Nhiel Apuran — Made with ❤️ in Cebu</div>
+    </footer>
+  </div>
+
+  <div id="lightbox"><img src="" alt="Expanded Project Image"></div>
+
+  <script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let words = [];
+    const textList = ["LLCC Warriors","Team Spirit","Unity","Passion","Excellence","Respect","Dedication","Strength","Focus","Discipline","Energy","Courage","Commitment","Victory","Champion"];
+    const colors = ["#06b6d4","#7c3aed","#f472b6","#facc15","#22d3ee","#a78bfa","#34d399","#fb7185"];
+
+    let mouse = {x:0, y:0};
+    window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+
+    function resize(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;}
+    window.addEventListener('resize',resize);resize();
+
+    for(let i=0;i<80;i++){
+      words.push({
+        text:textList[Math.floor(Math.random()*textList.length)],
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        dx:(Math.random()-0.5)*1.5,
+        dy:(Math.random()-0.5)*1.5,
+        size:Math.random()*14+16,
+        opacity:Math.random()*0.5+0.3,
+        color:colors[Math.floor(Math.random()*colors.length)],
+        colorShift:Math.random()*360
+      });
+    }
+
+    function draw(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      words.forEach(w=>{
+        const dist = Math.hypot(mouse.x - w.x, mouse.y - w.y);
+        const glow = Math.max(0, 1 - dist / 100);
+        const brightness = 70 + glow * 30; // brighten color
+        const glowOpacity = w.opacity + glow * 0.6;
+
+        w.colorShift += 1;
+        const hue = w.colorShift % 360;
+        ctx.font=`${w.size}px Poppins, sans-serif`;
+        ctx.shadowColor=`hsla(${hue},100%,${brightness}%,${glowOpacity})`;
+        ctx.shadowBlur=glow * 25;
+        ctx.fillStyle=`hsla(${hue},100%,${brightness}%,${glowOpacity})`;
+        ctx.fillText(w.text,w.x,w.y);
+        ctx.shadowBlur=0;
+
+        w.x+=w.dx; w.y+=w.dy;
+        if(w.x<0) w.x=canvas.width;
+        if(w.x>canvas.width) w.x=0;
+        if(w.y<0) w.y=canvas.height;
+        if(w.y>canvas.height) w.y=0;
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    // Lightbox
+    const lightbox=document.getElementById('lightbox');
+    const lightImg=lightbox.querySelector('img');
+    document.querySelectorAll('.gallery img').forEach(img=>{
+      img.addEventListener('click',()=>{
+        lightImg.src=img.src;
+        lightbox.style.display='flex';
+      });
+    });
+    lightbox.addEventListener('click',()=>{lightbox.style.display='none';});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')lightbox.style.display='none';});
+  </script>
+</body>
+</html>
